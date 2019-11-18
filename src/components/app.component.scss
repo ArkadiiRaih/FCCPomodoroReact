@@ -1,0 +1,67 @@
+:root {
+    font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+}
+  
+$backgrond-light: #ffc600;
+$text-light: #1d1d1d;
+$backgrond-dark: hsl(235, 47%, 19%);
+$text-dark: #fff;
+$control-hover-dark: #ffd373;
+
+.bgLight {
+  background: $backgrond-light;
+  color: $text-light;
+}
+.bgDark {
+  background: $backgrond-dark;
+  color: $text-dark;
+}
+
+.textCenter {
+  text-align: center;
+}
+  
+.section {
+  margin: 10px 20px;
+}
+
+@media (max-width: 320px) {
+  :root {
+    font-size: 10px;
+  }
+  .section {
+    margin: 0 20px;
+  }
+}
+  
+.controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.controls__text {
+  font-size: 3rem;
+}
+  
+.controlButton {
+  border: none;
+  background: none;
+  color: $text-dark;
+  font-weight: 1000;
+  font-size: 3rem;
+  &:hover{
+    transform: scale(1.2);
+    color: $control-hover-dark;
+    cursor: pointer;
+  }
+}
